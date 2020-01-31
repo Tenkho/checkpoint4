@@ -1,0 +1,14 @@
+{% extends 'admin/layout_admin.html.twig' %}
+
+{% block title %}Edit Performs{% endblock %}
+
+{% block body %}
+<div class="adminIndex">
+    <h1>Edit Performs</h1>
+
+    {{ include('admin/performs/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('performs_index') }}" class="button btn btn-secondary m-2">back to list</a>
+
+</div>
+{% endblock %}

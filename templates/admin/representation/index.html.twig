@@ -1,0 +1,30 @@
+{% extends 'admin/layout_admin.html.twig' %}
+
+{% block title %}Representation index{% endblock %}
+
+{% block body %}
+    <div class="adminIndex">
+        <h1 class="h1-Admin">Representations index</h1>
+
+        <a href="{{ path('representation_new') }}">
+            <button class="btn btn-secondary mb-5 center-button">
+                <i class="fas fa-plus"></i> Add representation
+            </button>
+        </a>
+
+        {% for representation in representations %}
+            <div class="m-2 adminList">
+                <p>{{ representation.name }}</p>
+                <div class="buttonAdmin">
+                    <a href="{{ path('representation_edit', {'id': representation.id}) }}">
+                        <button class="btn btn-secondary mr-3 ml-3"><i class="fas fa-pen"></i></button>
+                    </a>
+                    {{ include('admin/representation/_delete_form.html.twig') }}
+                </div>
+            </div>
+        {% else %}
+            <div>No representations</div>
+        {% endfor %}
+
+    </div>
+{% endblock %}

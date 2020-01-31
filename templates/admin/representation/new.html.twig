@@ -1,0 +1,13 @@
+{% extends 'admin/layout_admin.html.twig' %}
+
+{% block title %}New Show{% endblock %}
+
+{% block body %}
+<div class="adminIndex">
+    <h1>Create new Show</h1>
+
+    {{ include('admin/representation/_form.html.twig') }}
+
+    <a href="{{ path('representation_index') }}" class="button btn btn-secondary">back to list</a>
+</div>
+{% endblock %}

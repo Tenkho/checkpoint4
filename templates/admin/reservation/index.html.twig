@@ -1,0 +1,25 @@
+{% extends 'admin/layout_admin.html.twig' %}
+
+{% block title %}Reservation index{% endblock %}
+
+{% block body %}
+    <div class="adminIndex">
+        <h1 class="h1-Admin">Reservations index</h1>
+
+        <div class="m-2 listReservation">
+            <p class="bigTitle">Name</p>
+            <p class="bigTitle">Number of places</p>
+            <p class="bigTitle">Show</p>
+        </div>
+        {% for reservation in reservations %}
+            <div class="m-2 listReservation">
+                <p>{{ reservation.name }}</p>
+                <p>{{ reservation.nbPlace }}</p>
+                <p>{{ reservation.spectacle.name }}</p>
+            </div>
+        {% else %}
+            <div>No reservations</div>
+        {% endfor %}
+
+    </div>
+{% endblock %}

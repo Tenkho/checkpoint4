@@ -1,0 +1,13 @@
+{% extends 'admin/layout_admin.html.twig' %}
+
+{% block title %}New Performs{% endblock %}
+
+{% block body %}
+<div class="adminIndex">
+    <h1>Create new Performs</h1>
+
+    {{ include('admin/performs/_form.html.twig') }}
+
+    <a href="{{ path('performs_index') }}" class="button btn btn-secondary">back to list</a>
+</div>
+{% endblock %}

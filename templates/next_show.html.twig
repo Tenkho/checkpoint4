@@ -1,0 +1,57 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Next Show{% endblock %}
+
+{% block body %}
+
+    <div class="nextShow">
+        <h1>The Next Show : {{ representation[0].name }}</h1>
+        <div class="infos">
+            <div>
+                <p class="mb-3"><i class="fas fa-calendar-alt"></i> {{ representation[0].date|date("d/m/Y") }} at 20:00</p>
+                <p class="mb-3"><i class="far fa-building"></i> {{ representation[0].localisation }}</p>
+                <p class="m-0">This show contains :</p>
+                    {% for perform in representation[0].performs %}
+                        <p class="ml-4"><i class="fas fa-star"></i> {{ perform.title }}</p>
+                    {% endfor %}
+            </div>
+
+            <div class="remaining">
+                <img src="https://abstract-technology.fr/media/plog-2014/ticket.png/@@images/image.png" alt="ticket image">
+                <p>Remaining Place : <strong>{{ remaining }}</strong></p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="tarif">
+
+        <div class="pricing-table">
+            <h3 class="pricing-title">Adult</h3>
+            <div class="price">$20<sup>/ pers.</sup></div>
+
+        </div>
+
+        <div class="pricing-table recommended">
+            <h3 class="pricing-title">Child</h3>
+            <div class="price">$15<sup>/ pers.</sup></div>
+
+        </div>
+
+    </div>
+
+    <div class="reservation">
+        <h3>Reservation</h3>
+        {{ form_start(form) }}
+        <div>
+            {{ form_row(form.name) }}
+            {{ form_row(form.email) }}
+            {{ form_row(form.nbPlace) }}
+            <div class="hidden">{{ form_row(form.spectacle) }}</div>
+        </div>
+        <button class="btn btn-secondary">{{ button_label|default('To reserve') }}</button>
+        {{ form_end(form) }}
+
+    </div>
+
+{% endblock %}

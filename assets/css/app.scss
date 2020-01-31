@@ -1,0 +1,462 @@
+@import "vars";
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/brands';
+@import "~bootstrap/scss/bootstrap";
+
+body {
+    background-image: url("https://circuskaput.com/_assets/images/circusstars.png");
+    font-family: $fontText;
+    font-size: 18px;
+    margin-top: 10vh;
+    min-height: 100vh;
+}
+
+.navbar{
+    background-color: $colorBlue;
+}
+
+.navbar-brand{
+    font-size: 30px;
+    font-family: $titleText;
+}
+
+.nav-link{
+    font-size: 20px;
+    margin-left: 20px;
+    font-family: $titleText;
+}
+
+.carousel{
+    margin-top: 7vh;
+}
+.carousel div img{
+    height: 800px;
+    object-fit: cover;
+}
+
+.aboutUs{
+    text-align: center;
+    margin-top: 5vh;
+
+    h1{
+        font-family: $titleText;
+        font-size: 5rem;
+        margin-bottom: 20px;
+        color: $colorBlue;
+    }
+
+    p{
+        justify-content: center;
+        margin : 5px;
+        font-size: 18px;
+    }
+}
+
+.home_perform{
+    margin-top: 8vh;
+    font-family: $titleText;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 4vh;
+    color: $colorBlue;
+}
+
+.titlePerf{
+    a{
+        color: white;
+    }
+}
+
+.imgPerf{
+    img{
+        width: 350px;
+        max-height: 400px;
+        min-height: 350px;
+        object-fit: cover;
+    }
+}
+
+.footer-user {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: $colorBlue;
+    position: relative;
+    margin-top: 15vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    bottom: 0;
+    font-family: $fontText;
+
+
+    i{
+        font-size: $footerTitleSize;
+    }
+}
+
+.footer-information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width :30%;
+
+    .text{
+        font-size: $footerTextSize;
+        padding-bottom: 0.5vh;
+        color: white;
+    }
+}
+
+.footer-logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width :30%;
+
+    img{
+        width: 150px;
+        height: 150px;
+    }
+}
+
+.footer-reseaux {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width :30%;
+
+    .text{
+        font-size: $footerTextSize;
+        padding-bottom: 0.5vh;
+        color: white;
+    }
+}
+
+.title {
+    font-size: $footerTitleSize;
+    padding-bottom: 1vh;
+}
+
+@media screen and (max-width: 540px) {
+    .footer-user {
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+
+        .footer-information, .footer-reseaux, .footer-logo {
+            width: 100%;
+            margin-top: 2vh;
+        }
+    }
+}
+
+
+
+
+
+
+/** ========================
+ * Contenedor
+ ============================*/
+.pricing-wrapper {
+    width: 960px;
+    margin: 40px auto 0;
+}
+
+.pricing-table {
+    margin: 0 10px;
+    text-align: center;
+    width: 300px;
+    float: left;
+    -webkit-box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    -webkit-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+
+.pricing-table:hover {
+    -webkit-transform: scale(1.06);
+    -ms-transform: scale(1.06);
+    -o-transform: scale(1.06);
+    transform: scale(1.06);
+}
+
+.pricing-title {
+    color: #FFF;
+    background: #e95846;
+    padding: 20px 0;
+    font-size: 2em;
+    text-transform: uppercase;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.4);
+}
+
+.pricing-table.recommended .pricing-title {
+    background: #2db3cb;
+}
+
+.pricing-table.recommended .pricing-action {
+    background: #2db3cb;
+}
+
+.pricing-table .price {
+    background: #403e3d;
+    font-size: 2em;
+    font-weight: 700;
+    color: white;
+    padding: 20px 0;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.4);
+}
+
+.pricing-table .price sup {
+    font-size: 0.4em;
+    position: relative;
+    left: 5px;
+}
+
+.table-list li {
+    font-size: 1.4em;
+    font-weight: 700;
+    padding: 12px 8px;
+}
+
+.table-list li:before {
+    content: "\f00c";
+    color: #3fab91;
+    display: inline-block;
+    position: relative;
+    right: 5px;
+    font-size: 16px;
+}
+
+.table-list li span {
+    font-weight: 400;
+}
+
+.table-list li span.unlimited {
+    color: #FFF;
+    background: #e95846;
+    font-size: 0.9em;
+    padding: 5px 7px;
+    display: inline-block;
+    -webkit-border-radius: 38px;
+    -moz-border-radius: 38px;
+    border-radius: 38px;
+}
+
+
+
+.table-buy p sup {
+    font-size: 0.5em;
+    position: relative;
+    left: 5px;
+}
+
+.table-buy .pricing-action {
+    float: right;
+    color: #FFF;
+    background: #e95846;
+    padding: 10px 16px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    font-weight: 700;
+    font-size: 1.4em;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.4);
+    -webkit-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+
+.table-buy .pricing-action:hover {
+    background: #cf4f3e;
+}
+
+.recommended .table-buy .pricing-action:hover {
+    background: #228799;
+}
+
+/** ================
+ * Responsive
+ ===================*/
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    .pricing-wrapper {
+        width: 768px;
+    }
+
+    .pricing-table {
+        width: 236px;
+    }
+
+    .table-list li {
+        font-size: 1.3em;
+    }
+
+}
+
+@media only screen and (max-width: 767px) {
+    .pricing-wrapper {
+        width: 420px;
+    }
+
+    .pricing-table {
+        display: block;
+        float: none;
+        margin: 0 0 20px 0;
+        width: 100%;
+    }
+}
+
+.tarif{
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+}
+
+.reservation{
+    margin-top: 10vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    h3{
+        font-family: $titleText;
+        font-size: 30px;
+        color: $colorBlue;
+    }
+
+    form{
+        width: 75%;
+    }
+}
+
+.nextShow{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1{
+        font-family: $titleText;
+        font-size: 50px;
+        text-align: center;
+        padding-top: 10vh;
+        color: $colorBlue;
+        margin-bottom: 5vh;
+    }
+
+    .infos{
+        font-size: 1.3rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 50%;
+
+        .remaining{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            img{
+                width: 150px;
+                height: 100px;
+            }
+        }
+    }
+}
+
+.hidden{
+    display: none;
+}
+
+.adminIndex{
+    margin-top: 5vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    form{
+        width: 70%;
+    }
+
+
+    h1{
+        padding-top: 5vh;
+        font-family: $titleText;
+        color: $colorBlue;
+    }
+
+    .adminList{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 40%;
+        margin-left: 30%;
+
+        .buttonAdmin{
+            display: flex;
+            flex-direction: row;
+        }
+    }
+
+    .listReservation{
+        display: flex;
+        width: 50%;
+        justify-content: space-between;
+
+        .bigTitle{
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        p{
+            margin: 10px 5px;
+        }
+    }
+}
+
+.flash-mess{
+    margin-top: 8vh;
+}
+
+
+@media only screen and (max-width: 479px) {
+    .nextShow {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h1 {
+            font-family: $titleText;
+            font-size: 40px;
+            text-align: center;
+            padding-top: 14vh;
+            color: $colorBlue;
+            margin-bottom: 5vh;
+        }
+
+        .infos {
+            font-size: 1.3rem;
+            display: flex;
+            flex-direction: column;
+            width: 75%;
+            align-items: center;
+
+            .remaining {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                img {
+                    width: 150px;
+                    height: 100px;
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}

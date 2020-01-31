@@ -1,0 +1,32 @@
+{% extends 'admin/layout_admin.html.twig' %}
+
+{% block title %}Performs index{% endblock %}
+
+{% block body %}
+    <div class="adminIndex">
+        <h1 class="h1-Admin">Performs index</h1>
+
+        <a href="{{ path('performs_new') }}">
+            <button class="btn btn-secondary mb-5 center-button">
+                <i class="fas fa-plus"></i> Add perform
+            </button>
+        </a>
+
+        {% for perform in performs %}
+            <div class="m-2 adminList">
+                <p>{{ perform.title }}</p>
+                <div class="buttonAdmin">
+                    <a href="{{ path('performs_edit', {'id': perform.id}) }}">
+                        <button class="btn btn-secondary mr-3 ml-3"><i class="fas fa-pen"></i></button>
+                    </a>
+                    {{ include('admin/performs/_delete_form.html.twig') }}
+                </div>
+            </div>
+        {% else %}
+            <div>No performs</div>
+        {% endfor %}
+
+    </div>
+
+
+{% endblock %}
